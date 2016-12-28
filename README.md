@@ -6,7 +6,7 @@ a tutorial code for building Seq2seq chatbot
 * numpy
 * json
 
-###Features
+###Features[for more details](https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true)
 * dynamic rnn with smart loader
 * beam search on prediction
 * signal indicator for decoder
