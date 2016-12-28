@@ -13,11 +13,11 @@ a tutorial implementation of Seq2seq chatbot with a techniqal report: [read](htt
 
 ###Instruction
 * run "python train.py"
-* after training is completed, a folder containing the model will appear inside the data folder
+* after training is completed, a model folder will appear inside the data folder
 * run "python test.py" to see the result
 
 ###Try your own data
-it's possible to run it on your own data, but you need to generate the same format like those in bbt_data
+it's possible to run it on your own data, but you need to generate 2 files with same format like those in bbt_data
 * text.txt      this is the training data contatining the pair in number token format
 * dict.json     this is the dicitonary to translate from number token to English word token in test time
 * actors.json   (optional), this is for signal indication in test time
