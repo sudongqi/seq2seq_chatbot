@@ -6,8 +6,7 @@ a tutorial implementation of Seq2seq chatbot with a techniqal report: [read](htt
 * beam search on prediction
 * signal indicator for decoder (read the report for more details)
 
-###Python dependency
-* python 2.7
+###Python 2.7 dependency
 * tensorflow 0.12
 * numpy
 * json
