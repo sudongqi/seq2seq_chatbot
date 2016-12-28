@@ -9,7 +9,7 @@ a tutorial implementation of Seq2seq chatbot with a techniqal report: [read](htt
 ###Features
 * dynamic rnn with smart loader
 * beam search on prediction
-* signal indicator for decoder
+* signal indicator for decoder (read the report for more details)
 
 ###Instruction
 * run "python train.py"
