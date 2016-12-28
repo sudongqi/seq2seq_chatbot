@@ -1,5 +1,5 @@
 # TensorFlow_ChatBot
-a tutorial code of building Seq2seq chatbot
+a tutorial code for building Seq2seq chatbot
 
 ##python_dependency
 * tensorflow 0.12
