@@ -18,7 +18,7 @@ a tutorial implementation of Seq2seq chatbot with a techniqal report: [read](htt
 
 ###Try your own data
 it's possible to run it on your own data, but you need to generate at least files with the same format like those in bbt_data
-* text.txt      (required) this is the training data contatining the pair in number token format
-* dict.json     (required) this is the dicitonary to translate from number token to English word token in test time
+* text.txt      (required), this is the training data contatining the pair in number token format
+* dict.json     (required), this is the dicitonary to translate from number token to English word token in test time
 * actors.json   (optional), this is for signal indication in test time
 * summary.json  (optional), this file contain the length info for selecting the right bucket options for training
