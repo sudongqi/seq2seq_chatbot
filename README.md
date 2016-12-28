@@ -9,6 +9,7 @@ a tutorial code for building Seq2seq chatbot
 ###features
 * dynamic rnn with smart loader
 * beam search on prediction
+* signal indicator for decoder
 
 ###instruction
 * run "python train.py"
