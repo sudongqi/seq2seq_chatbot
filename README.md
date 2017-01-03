@@ -24,5 +24,5 @@ it's possible to run it on your own data, but you need to generate at least file
 * summary.json  (optional), this file contain the length info for selecting the right bucket options for training
 
 ###OpenSubtitles data 
-If you want to train on openSubtitles (english 2016) dataset, this tutorial provide a data process script for this format.
+If you want to train on openSubtitles (english 2016) dataset, this tutorial provide a data process script (openSub_data_generator.py) for this format.
 [click here](http://opus.lingfil.uu.se/OpenSubtitles2016.php)
