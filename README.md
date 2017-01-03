@@ -1,10 +1,10 @@
 # TensorFlow_ChatBot
-a tutorial implementation of Seq2seq chatbot with a techniqal report: [read](https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true)
+a tutorial implementation of Seq2seq chatbot
 
 ###Features
 * dynamic rnn with smart loader
 * beam search on prediction
-* signal indicator for decoder (read the report for more details)
+* signal indicator for decoder [click here for more details](https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true)
 
 ###Python 2.7 dependency
 * tensorflow 0.12
@@ -23,5 +23,4 @@ it's possible to run it on your own data, but you need to generate at least file
 * actors.json   (optional), this is for signal indication in test time
 * summary.json  (optional), this file contain the length info for selecting the right bucket options for training
 
-###OpenSubtitles(2016) data
-[link](http://opus.lingfil.uu.se/OpenSubtitles2016.php)
+###OpenSubtitles(2016) data [click here](http://opus.lingfil.uu.se/OpenSubtitles2016.php)
