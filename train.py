@@ -14,7 +14,7 @@ import util.s2s_reader as s2s_reader
 #the file where we read the data/model from
 file_name = "bbt_data"
 #if set to true, then load model from file instead of start a new model
-load_model = True
+load_model = False
 #if set to true, use adam optimizer instead of sgd
 adam_opt = True
 #batch size for training
