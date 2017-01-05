@@ -1,5 +1,5 @@
 # TensorFlow_ChatBot
-a tutorial implementation of Seq2seq chatbot.
+A tutorial implementation of Seq2seq chatbot.
 
 ###Features
 * dynamic rnn with smart loader
