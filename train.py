@@ -155,6 +155,7 @@ else:
 	os.mkdir(save_path)
 	sess.run(tf.global_variables_initializer())
 	losses = []
+	print("Model setup completed.")
 
 
 
@@ -162,7 +163,6 @@ else:
 
 
 #-----------------------------------training-------------------------------------------
-
 
 
 
