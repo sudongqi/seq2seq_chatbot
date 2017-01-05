@@ -41,7 +41,7 @@ num_layers = 1
 truncated_std = 0.1
 keep_prob = 0.95
 max_epoch = 20
-norm_clip = 8
+norm_clip = 5
 
 #training params for adam
 adam_learning_rate = 0.001
