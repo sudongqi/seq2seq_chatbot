@@ -20,8 +20,8 @@ adam_opt = True
 #batch size for training
 batch_size = 128
 
-#if bucket_option can choose [1,2,3 ... n] such that no computation is wasted on padding
-#but at the end of the epoch, the model will need to clean up n^2 non-full buckets
+#bucket_option can choose [1,2,3 ... n] such that no computation spend on padding
+#but at the end of the epoch, the model will need to clean up n^2 non-full buckets (can be turned off by setting clean_mode=False)
 #so for small dataset [5, 10, 15 ... n] is faster than [1,2,3 ... n]
 #bucket_option = [i for i in range(1, 20+1)]
 bucket_option = [5,10,15,20,25,31]
