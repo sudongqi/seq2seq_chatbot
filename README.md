@@ -1,10 +1,10 @@
 # TensorFlow_ChatBot
-A tutorial implementation of Seq2seq chatbot.
+A tutorial implementation of Seq2seq chatbot. [read the technical report] (https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true)
 
 ###Features
 * dynamic rnn with smart loader
 * beam search on prediction
-* signal indicator for decoder [read the technical report](https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true)
+* signal indicator for decoder
 
 ###Python 2.7 dependency
 * tensorflow 0.12
