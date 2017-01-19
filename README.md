@@ -1,5 +1,5 @@
 # TensorFlow_ChatBot
-A tutorial implementation of Seq2seq chatbot. [read the technical report] (https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true)
+An implementation of Seq2seq chatbot. [read the technical report] (https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true)
 
 ###Features
 * dynamic rnn with smart loader
