@@ -5,7 +5,7 @@ An implementation of Seq2seq chatbot.
 * dynamic rnn with smart loader **(padding free)**
 * beam search on prediction **(fast approximation on global optimum)**
 * signal indicator for decoder **(partial control on decoder)**
-Read technical report: https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true
+* Read technical report: https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true
 
 ### Python 2.7 dependency
 * tensorflow 0.12
