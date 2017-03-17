@@ -65,7 +65,6 @@ save_path = file_name+"/"+model_name
 
 
 
-
 #---------------------------------model definition------------------------------------------
 
 tf.nn.ops.reset_default_graph()
@@ -99,7 +98,6 @@ for i in xrange(num_layers):
 
 cell = tf.nn.rnn_cell.MultiRNNCell(cells=cell_list, state_is_tuple=True)
 
-
 #encoder & decoder defintion
 _, enc_states = tf.nn.dynamic_rnn(cell = cell, 
 	inputs = enc_inputs_emb, 
@@ -113,8 +111,6 @@ dec_outputs, dec_states = tf.nn.dynamic_rnn(cell = cell,
 	dtype = tf.float32, 
 	time_major = True, 
 	scope="decoder")
-
-
 
 #output layers
 project_w = tf.Variable(tf.truncated_normal(shape=[output_size, embedding_size], stddev=truncated_std), name="project_w")
@@ -137,7 +133,6 @@ if adam_opt:
 else:
 	optimizer = tf.train.MomentumOptimizer(learning_rate=learning_rate, momentum = momentum, use_nesterov=True)
 
-
 gvs = optimizer.compute_gradients(avg_loss)
 capped_gvs = [(tf.clip_by_norm(grad, norm_clip), var) for grad, var in gvs]
 train_op = optimizer.apply_gradients(capped_gvs)
@@ -154,7 +149,6 @@ if load_model:
 		losses = json.load(json_data)
 		reader.epoch = len(losses)+1
 	print("Model restored.")
-
 else:
 	os.mkdir(save_path)
 	sess.run(tf.global_variables_initializer())
@@ -166,10 +160,6 @@ else:
 
 
 #-----------------------------------training-------------------------------------------
-
-
-
-
 
 def update_summary(save_path, losses):
 	summary_location = save_path + "/summary.json"
@@ -208,7 +198,6 @@ while True:
 		saver.save(sess, cwd+"/"+save_path+"/model.ckpt")
 		print("Model saved")
 
-
 		if reader.epoch == (max_epoch+1):
 			break
 
@@ -222,7 +211,6 @@ while True:
 	if count%10 == 0:
 		print str(loss_t) + " @ epoch: " + str(reader.epoch) + " count: "+ str(epoch_count * batch_size) 
 
-
-
-
+		
+		
 sess.close()
