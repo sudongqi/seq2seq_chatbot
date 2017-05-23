@@ -58,7 +58,7 @@ max_sequence_len = 20
 
 #---------------------------------model definition------------------------------------------
 
-tf.nn.ops.reset_default_graph()
+tf.reset_default_graph()
 sess = tf.InteractiveSession()
 
 #placeholder
@@ -72,22 +72,26 @@ enc_inputs_emb = tf.nn.embedding_lookup(emb_weights, enc_inputs, name="enc_input
 dec_inputs_emb = tf.nn.embedding_lookup(emb_weights, dec_inputs, name="dec_inputs_emb")
 
 #cell definiton
-cell_list=[]
-
-for i in xrange(num_layers):
-	single_cell = tf.nn.rnn_cell.LSTMCell(num_units=hidden_size, num_proj=projection_size, state_is_tuple=True)
-	cell_list.append(single_cell)
-
-cell = tf.nn.rnn_cell.MultiRNNCell(cells=cell_list, state_is_tuple=True)
+def getStackedLSTM():
+	cell_list=[]
+	for i in xrange(num_layers):
+		single_cell = tf.contrib.rnn.LSTMCell(
+			num_units=hidden_size, 
+			num_proj=projection_size, 
+			#initializer=tf.truncated_normal_initializer(stddev=truncated_std),
+			state_is_tuple=True
+			)
+		cell_list.append(single_cell)
+	return tf.contrib.rnn.MultiRNNCell(cells=cell_list, state_is_tuple=True)
 
 #encoder & decoder defintion
-_, enc_states = tf.nn.dynamic_rnn(cell = cell, 
+_, enc_states = tf.nn.dynamic_rnn(cell = getStackedLSTM(), 
 	inputs = enc_inputs_emb, 
 	dtype = tf.float32, 
 	time_major = True, 
 	scope="encoder")
 
-dec_outputs, dec_states = tf.nn.dynamic_rnn(cell = cell, 
+dec_outputs, dec_states = tf.nn.dynamic_rnn(cell = getStackedLSTM(), 
 	inputs = dec_inputs_emb, 
 	initial_state = enc_states, 
 	dtype = tf.float32, 
