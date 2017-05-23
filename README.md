@@ -10,7 +10,7 @@ Read technical report:
 https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true
 
 ### Python 2.7 dependency
-* tensorflow 0.12
+* tensorflow 1.1 (from 0.12)
 * numpy
 * json
 
