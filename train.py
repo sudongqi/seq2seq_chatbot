@@ -45,7 +45,7 @@ if projection_size!=None:
 #training params, truncated_norm will resample x > 2std; so when std = 0.1, the range of x is [-0.2, 0.2]
 truncated_std = 0.1
 keep_prob = 0.95
-max_epoch = 32
+max_epoch = 20
 norm_clip = 5
 
 #training params for adam
