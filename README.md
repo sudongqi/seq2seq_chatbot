@@ -1,4 +1,3 @@
-# TensorFlow_ChatBot
 An implementation of Seq2seq chatbot. 
 
 ### Features
