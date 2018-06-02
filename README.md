@@ -1,21 +1,22 @@
-An implementation of Seq2seq chatbot. 
+## seq2seq_chatbot
+An implementation of Seq2seq chatbot in tensorflow. 
 
 ### Features
 * dynamic rnn with smart loader **(padding free)**
 * beam search on prediction **(fast approximation on global optimum)**
 * signal indicator for decoder **(partial control on decoder)**
 
-Read technical report: 
+A technical report: 
 https://docs.google.com/gview?url=http://sudongqi.com/Documents/2016_02.pdf&embedded=true
 
 ### Python 2.7 dependency
-* tensorflow 1.1 (from 0.12)
+* tensorflow 1.8
 * numpy
 * json
 
 ### Instruction
-* run "python train.py" and wait (10 minutes on GTX 1080) until training is completed
-* run "python test.py" to see the result
+* run "python train.py" and wait (5 minutes on GTX 1080 Ti with cuda 9.0 and cudnn 7.0) until training is completed
+* run "python test.py" to enter the interactive session with the chatbot
 
 ### Try your own data
 it's possible to run it on your own data, but you need to generate at least 2 files with the same format like those in bbt_data.
