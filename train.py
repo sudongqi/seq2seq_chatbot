@@ -81,7 +81,6 @@ def getStackedLSTM():
         single_cell = tf.contrib.rnn.LSTMCell(
             num_units=hidden_size,
             num_proj=projection_size,
-            # initializer=tf.truncated_normal_initializer(stddev=truncated_std),
             state_is_tuple=True
         )
         if i < num_layers - 1 or num_layers == 1:

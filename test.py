@@ -11,7 +11,7 @@ import re
 # the file where we read the data/model from
 file_name = "bbt_data"
 # interactive mode allow user to talk to the model directly, if set to false, it will test on the training data instead
-iteracitve = True
+interactive = True
 # regular expression for parsing user input
 expression = r"[0-9]+|[']*[\w]+"
 # signal mode allow user to insert signal token before the decoder generate sentence
@@ -71,7 +71,6 @@ def getStackedLSTM():
         single_cell = tf.contrib.rnn.LSTMCell(
             num_units=hidden_size,
             num_proj=projection_size,
-            # initializer=tf.truncated_normal_initializer(stddev=truncated_std),
             state_is_tuple=True
         )
         cell_list.append(single_cell)
@@ -223,7 +222,7 @@ def translate(token_list):
 
 # ---------------------------prediction loop---------------------------
 
-if iteracitve:
+if interactive:
 
     print("\n--------------------------")
     print("--Interactive mode is on--")
